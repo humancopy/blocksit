@@ -7,11 +7,11 @@
 		offsetY: 5,
 		blockElement: 'div'
 	};
-	
+
 	//dynamic variable
 	var container, colwidth;
 	var blockarr = [];
-	
+
 	//ie indexOf fix
 	if (!Array.prototype.indexOf) {
 		Array.prototype.indexOf = function(elt /*, from*/) {
@@ -30,7 +30,7 @@
 			return -1;
 		};
 	}
-	
+
 	//create empty blockarr
 	var createEmptyBlockarr = function() {
 		//empty blockarr
@@ -39,7 +39,7 @@
 			blockarrPush('empty-'+i, i, 0, 1, -blocksOptions.offsetY);
 		}
 	}
-	
+
 	//add new block to blockarr
 	var blockarrPush = function(id, x, y, width, height) {
 		//define block object based on block width
@@ -52,7 +52,7 @@
 			blockarr.push(block);
 		}
 	}
-	
+
 	//remove block from blockarr
 	var blockarrRemove = function(x, num) {
 		for(var i=0; i<num; i++) {
@@ -61,7 +61,7 @@
 			blockarr.splice(index, 1);
 		}
 	}
-	
+
 	//retrieve block index based on block's x position
 	var getBlockIndex = function(value, type) {
 		
@@ -87,7 +87,7 @@
 		
 		return [min, max, temparr.indexOf(min)];
 	}
-	
+
 	//get block x and y position
 	var getBlockPostion = function(size) {
 		
@@ -155,7 +155,7 @@
 		blockarrRemove(pos[0], obj.data('size'));
 		blockarrPush(obj.attr('id'), pos[0], pos[1], obj.data('size'), blockHeight);	
 	}
-	
+
 	$.fn.BlocksIt = function(options) {
 		//BlocksIt options
 		if (options && typeof options === 'object') {

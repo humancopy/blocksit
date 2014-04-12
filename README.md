@@ -19,25 +19,24 @@ BlocksIt.js will re-position the selected elements using CSS absolute position p
 
 1. First, include jQuery and .BlocksIt.js script files inside <head> tag like usual.
 
-```javascript
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="blocksit.js"></script>
-```
+   ```html
+   <script type="text/javascript" src="jquery.min.js"></script>
+   <script type="text/javascript" src="blocksit.js"></script>
+   ```
 
-It should works well with jQuery 1.7.1 (haven’t tested for lower version).
+   It should works well with jQuery 1.7.1 (haven’t tested for lower version).
 
 2. Next, call the .BlocksIt() function on jQuery object. It supports for few settings, do refer to Configuration section below for deep details.
-```javascript
-$(document).ready(function() {
-   $('#objectID').BlocksIt();
-});
-```
+   ```javascript
+   $(document).ready(function() {
+      $('#objectID').BlocksIt();
+   });
+   ```
 
 3. Done! =)
 
-```
-#Note: If the blocks contains of <img> element, be sure to specific the images' height before calling .BlocksIt() function, else you have to make sure the images are loaded.You could use $(window).load() to make sure everything have loaded into DOM, or use some plugin like [waitForImages](https://github.com/alexanderdickson/waitForImages) to check the images status.
-```
+**Note:**
+>If the blocks contains any **&lt;img&gt;** element, be sure to specify the images' height before calling .BlocksIt() function, else you have to make sure the images are loaded. You could use $(window).load() to make sure everything have loaded into DOM, or use some plugin like [imagesLoaded](https://github.com/desandro/imagesloaded) to check the images status.
 
 Configuration
 =============

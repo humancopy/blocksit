@@ -1,0 +1,8 @@
+{
+  "name": "blocksit",
+  "version": "1.0",
+  "main": "./blocksit.js",
+  "dependencies": {
+  	"jquery": ">=1.7.1"
+  }
+}
